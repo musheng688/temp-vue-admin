@@ -1,6 +1,8 @@
 <!--商品管理-->
 <template>
-  <div></div>
+  <div>
+    商品管理
+  </div>
 </template>
 
 <script setup></script>

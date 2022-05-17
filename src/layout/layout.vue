@@ -11,10 +11,7 @@
         <el-header>
           <el-row>
             <!-- 折叠菜单 -->
-            <el-icon
-              style="font-size: 25px"
-              @click="() => (isCollapse = !isCollapse)"
-            >
+            <el-icon style="font-size: 25px" @click="() => (isCollapse = !isCollapse)">
               <component :is="isCollapse ? Expand : Fold"></component>
             </el-icon>
             <breadcrumb></breadcrumb>
@@ -75,7 +72,7 @@ const menus = reactive([
   },
   {
     menuName: "系统管理",
-    path: "/systemset",
+    path: "/system",
     icon: "HomeFilled",
     children: [],
   },
@@ -86,6 +83,7 @@ const menus = reactive([
 .layout {
   display: flex;
   height: 100vh;
+
   // 侧边栏
   .el-aside {
     overflow: hidden;
@@ -105,7 +103,9 @@ const menus = reactive([
 
   .el-header {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
+    background-color: #c6e2ff;
   }
 }
 </style>

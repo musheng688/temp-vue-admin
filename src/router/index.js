@@ -10,7 +10,7 @@ const routes = [
     component: layout,
     children: [
       {
-        path: "/home",
+        path: "home",
         component: () => import("../views/home/home.vue"),
       },
     ],
@@ -18,12 +18,48 @@ const routes = [
   {
     path: "/user",
     name: "user",
-    redirect: "/userlist",
+    redirect: "/user/userlist",
     component: layout,
     children: [
       {
-        path: "/userlist",
+        path: "userlist",
         component: () => import("../views/user/userlist.vue"),
+      },
+    ],
+  },
+  {
+    path: "/goods",
+    name: "goods",
+    redirect: "/goods/goodsmanager",
+    component: layout,
+    children: [
+      {
+        path: "goodsmanager",
+        component: () => import("../views/goods/goodsmanager.vue"),
+      },
+    ],
+  },
+  {
+    path: "/order",
+    name: "order",
+    redirect: "/order/orderlist",
+    component: layout,
+    children: [
+      {
+        path: "orderlist",
+        component: () => import("../views/order/orderlist.vue"),
+      },
+    ],
+  },
+  {
+    path: "/system",
+    name: "system",
+    redirect: "/system/systemset",
+    component: layout,
+    children: [
+      {
+        path: "systemset",
+        component: () => import("../views/system/systemset.vue"),
       },
     ],
   },
